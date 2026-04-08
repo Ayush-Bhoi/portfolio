@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayush Bhoi | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(120deg, #f0f4ff, #f9f9f9);
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #eee;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero span {
+    color: #ffd369;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Skills */
+.skills div {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.skills div:hover {
+    background: #4e54c8;
+    color: white;
+}
+
+/* Projects */
+.project {
+    background: white;
+    margin: 15px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(78,84,200,0.3);
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background: #ffd369;
+    color: black;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* Footer */
+footer {
+    background: #4e54c8;
+    color: white;
+    padding: 10px;
+}
+
+/* Scroll Animation */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.typing-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.typing-text span {
+    color: #ffd369; /* highlight color */
+    font-weight: 600;
+    border-right: 2px solid #ffd369;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: #ffd369; }
+    100% { border-color: transparent; }
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* VERY IMPORTANT */
+    background: linear-gradient(to right, #4e54c8, #8f94fb); /* solid background */
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Ayush</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero md-5">
+    <h1>Hi, I'm <span>Ayush Bhoi</span></h1>
+
+<h2 class="typing-text">
+    I'm a <span id="typing"></span>
+</h2>
+<p style="max-width:600px;margin:auto;">
+    A passionate Full Stack Developer specializing in Python-based technologies.
+    I build scalable web applications using Django, Flask, and Laravel, with strong expertise in backend development and database design.
+</p>
+
+<div>
+    <a href="#" class="btn">GitHub</a>
+    <a href="#" class="btn">LinkedIn</a>
+</div>
+</section>
+
+<!-- About -->
+<section id="about" class="hidden">
+    <h2>About Me</h2>
+
+    <p style="max-width:1000px;margin:auto; line-height:1.6;">
+        I am a Python-focused Software Developer with hands-on experience in building full-stack web applications using Django, Flask, and Laravel. 
+        I have a strong foundation in backend development, database management, and API integration.
+
+        During my internship at Enlighten Infosystems, I developed multiple real-world projects, designed efficient database systems, and worked on performance optimization. 
+        I also mentored over 50 students in programming and web development, helping them improve their practical skills.
+
+        I am passionate about solving real-world problems through technology and continuously improving my development skills.
+    </p>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="hidden">
+    <h2>Skills</h2>
+
+    <div class="skills">
+        <div><strong>Languages:</strong> Python, Java, PHP, C, C++</div>
+        <div><strong>Frameworks:</strong> Django, Flask, Laravel</div><br>
+        <div><strong>Web:</strong> HTML, CSS, JavaScript, AJAX</div>
+        <div><strong>Database:</strong> MySQL, Oracle</div>
+        <div><strong>Tools:</strong> Git, GitHub</div>
+        <div><strong>Concepts:</strong> MVC, REST APIs</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="hidden">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>SWMC - Smart Waste Management System</h3>
+        <p>
+            Developed a smart waste reporting system that allows users to scan QR codes and report issues in real-time.
+            The system improves waste management efficiency and tracking.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>INFLOW - Inventory Management System</h3>
+        <p>
+            Designed a complete inventory system with stock tracking, role-based access control, and reporting features.
+            Helps businesses manage inventory efficiently.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>FINEFLOW - CRM System</h3>
+        <p>
+            Built a CRM application to manage customers, leads, and follow-ups.
+            Includes dashboard analytics and performance tracking.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>GIFTFLOW - E-commerce Website</h3>
+        <p>
+            Developed a Django-based e-commerce platform with authentication, product management, and order handling.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>LEGACYBAG - Flask E-commerce App</h3>
+        <p>
+            Created an online shopping platform using Flask with features like product catalog, cart system, and checkout.
+        </p>
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="hidden">
+    <h2>Contact</h2>
+
+<p>📍 Vadodara, Gujarat, India</p>
+<p>📞 +91 8200517195</p>
+<p>📧 ayushbhoi79@gmail.com</p>
+
+<p style="margin-top:15px;">
+    Feel free to reach out for collaboration, internships, or job opportunities.
+</p>
+</section>
+
+<footer>
+    <p>© 2026 Ayush Bhoi</p>
+</footer>
+
+<script>
+// Typing Animation
+const text = ["Full Stack Developer", "Python Developer", "Backend Engineer"];
+let i = 0, j = 0, current = "", isDeleting = false;
+
+function type() {
+    current = text[i];
+    document.getElementById("typing").textContent = current.substring(0, j);
+
+    if (!isDeleting && j < current.length) j++;
+    else if (isDeleting && j > 0) j--;
+    else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) i = (i + 1) % text.length;
+    }
+    setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
+
+// Scroll Animation
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
