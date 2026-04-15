@@ -6,33 +6,37 @@
 <title>Ayush Bhoi | Portfolio</title>
 
 <style>
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
+    font-family: "Segoe UI", sans-serif;
     background: linear-gradient(120deg, #f0f4ff, #f9f9f9);
     color: #333;
 }
 
-/* Navbar */
+/* NAVBAR */
 nav {
     background: linear-gradient(to right, #4e54c8, #8f94fb);
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: 15px 50px;
+    align-items: center;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
+nav h2 {
+    font-size: 1.5rem;
+}
+
+/* MENU */
 nav ul {
     display: flex;
     list-style: none;
@@ -47,13 +51,17 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: white;
+/* MOBILE MENU BUTTON */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
 }
 
-/* Hero */
+/* HERO */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 40px 20px;
     background: linear-gradient(to right, #4e54c8, #8f94fb);
     color: white;
     display: flex;
@@ -67,108 +75,80 @@ nav ul li a:hover {
     font-size: 2.5rem;
 }
 
-.hero span {
-    color: #ffd369;
+.hero p {
+    font-size: 1rem;
 }
 
-/* Sections */
+/* SECTIONS */
 section {
-    padding: 80px 20px;
-    text-align: center;
+    padding: 60px 15px;
 }
 
-/* Skills */
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .skills div {
-    display: inline-block;
     margin: 10px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background: white;
     border-radius: 25px;
     border: 1px solid #ddd;
-    transition: 0.3s;
+    font-size: 0.9rem;
 }
 
-.skills div:hover {
-    background: #4e54c8;
-    color: white;
-}
-
-/* Projects */
+/* PROJECT */
 .project {
-    background: white;
-    margin: 15px auto;
-    padding: 20px;
+    width: 90%;
     max-width: 600px;
-    border-radius: 12px;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.project:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(78,84,200,0.3);
-}
-
-/* Buttons */
+/* BUTTON */
 .btn {
     padding: 10px 20px;
-    background: #ffd369;
-    color: black;
-    border: none;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s;
+    margin: 10px 5px;
 }
 
-.btn:hover {
-    background: white;
-}
+/* RESPONSIVE (MOBILE) */
+@media (max-width: 768px) {
 
-/* Footer */
-footer {
-    background: #4e54c8;
-    color: white;
-    padding: 10px;
-}
+    nav ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #4e54c8;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
 
-/* Scroll Animation */
-.hidden {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.8s;
-}
+    nav ul.show {
+        display: flex;
+    }
 
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-.typing-text {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 10px;
-}
+    nav ul li {
+        margin: 15px 0;
+    }
 
-.typing-text span {
-    color: #ffd369; /* highlight color */
-    font-weight: 600;
-    border-right: 2px solid #ffd369;
-    padding-right: 5px;
-    animation: blink 0.7s infinite;
-}
+    .menu-toggle {
+        display: block;
+    }
 
-/* Cursor blink effect */
-@keyframes blink {
-    0% { border-color: transparent; }
-    50% { border-color: #ffd369; }
-    100% { border-color: transparent; }
-}
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* VERY IMPORTANT */
-    background: linear-gradient(to right, #4e54c8, #8f94fb); /* solid background */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .typing-text {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 50px 10px;
+    }
 }
 </style>
 </head>
@@ -177,7 +157,10 @@ nav {
 
 <nav>
     <h2>Ayush</h2>
-    <ul>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -322,6 +305,11 @@ const observer = new IntersectionObserver(entries => {
 });
 
 document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+    
 </script>
 
 </body>
