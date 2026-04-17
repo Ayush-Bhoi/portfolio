@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -783,3 +784,941 @@ type();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Ayush Bhoi | Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    html {
+    scroll-behavior: smooth;
+}
+:root {
+    --bg: #0b1220;
+    --card: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.12);
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #111827, #050814);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar,
+.navbar-glass {
+    background: rgba(10, 15, 30, 0.6);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* NAV LINKS */
+.navbar .nav-link {
+    color: #cbd5e1 !important;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.active-link {
+    color: #38bdf8 !important;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero h1 span {
+    background: linear-gradient(45deg,#38bdf8,#6366f1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: var(--muted);
+}
+
+/* BUTTONS */
+.btn-primary-custom,
+.btn-glow {
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    border: none;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-glow:hover,
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(99,102,241,0.6);
+}
+
+/* CARDS */
+.card-custom {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: 0.35s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-8px);
+    border-color: rgba(99,102,241,0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* SKILLS */
+.skill-badge {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 999px;
+    font-size: 13px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.skill-badge:hover {
+    background: rgba(99,102,241,0.2);
+    border-color: #6366f1;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 0;
+    scroll-margin-top: 80px;
+}
+
+/* FORM */
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+    background: rgba(255,255,255,0.05) !important;
+    color: #e5e7eb !important;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: rgba(229, 231, 235, 0.6) !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #6366f1;
+}
+
+/* FLOATING TAGS */
+.floating-tag {
+    position: absolute;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #e2e8f0;
+    animation: float 6s ease-in-out infinite;
+    backdrop-filter: blur(10px);
+}
+
+/* positions */
+.tag1 { top: 20%; left: 10%; }
+.tag2 { top: 30%; right: 10%; }
+.tag3 { bottom: 25%; left: 15%; }
+.tag4 { bottom: 20%; right: 15%; }
+.tag5 { top: 10%; left: 45%; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid var(--border);
+    background: rgba(0,0,0,0.2);
+    color: var(--muted);
+}
+
+:root.light {
+    --bg: #ffffff;
+    --card: #f9f9f9;
+    --border: #ddd;
+    --text: #111827;
+    --muted: #555;
+}
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #050814;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-top: 5px solid #6366f1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-glass">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="#home">
+      Ayush Bhoi
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto gap-2">
+
+        <li class="nav-item">
+          <a class="nav-link active-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <!-- <button id="themeToggle" class="btn btn-outline-light btn-sm ms-3">🌙</button> -->
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container text-center position-relative">
+
+        <!-- Floating tech tags -->
+        <div class="floating-tag tag1">Python</div>
+        <div class="floating-tag tag2">Django</div>
+        <div class="floating-tag tag3">Flask</div>
+        <div class="floating-tag tag4">Laravel</div>
+        <div class="floating-tag tag5">REST API</div>
+
+        <p class="text-secondary mb-2">
+            Full Stack Developer • Backend Engineer
+        </p>
+
+        <h1 class="display-4 fw-bold">
+            Building Scalable <span>Web Applications & Backend Systems</span>
+        </h1>
+
+        <h4 class="mt-3 text-secondary">
+            I’m a <span id="typing"></span>
+        </h4>
+
+        <p class="mt-4 col-lg-7 mx-auto text-secondary">
+            I build production-ready applications including CRM systems, e-commerce platforms,
+            automation tools, and backend systems using modern web technologies.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+
+            <a href="#projects" class="btn btn-glow">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn btn-outline-light">
+                Contact Me
+            </a>
+
+            <a href="#" class="btn btn-outline-light">
+                Resume
+            </a>
+
+        </div>
+
+        
+
+    </div>
+</section>
+
+<section id="stats">
+<div class="container text-center">
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card card-custom p-4">
+                <h2 class="fw-bold text-light">12+</h2>
+                <p class="text-secondary">Projects Completed</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-custom p-4">
+                <h2 class="fw-bold text-light">15+</h2>
+                <p class="text-secondary">Technologies</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-custom p-4 text-center">
+                <h2 class="fw-bold text-light">8+ Months</h2>
+                <p class="text-secondary">Industry Experience</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+
+    <div class="text-center mb-5">
+        <h2>About Me</h2>
+        <p class="text-secondary">
+            Who I am, what I build, and what I focus on
+        </p>
+    </div>
+
+    <div class="card card-custom p-5">
+
+        <p class="text-secondary">
+           I am a Full Stack Developer with strong experience in Web Development, Python Development, and Software Engineering principles.
+
+I build scalable web applications, backend systems, and desktop solutions using technologies like Django, Flask, Laravel, and Java-based frameworks.
+
+        </p>
+
+        <p class="text-secondary">
+I enjoy solving real-world problems through clean architecture, REST APIs, and efficient system design across different platforms.
+            automation tools, and management systems. My focus is on writing clean, maintainable, and efficient code.
+        </p>
+
+        <hr class="text-secondary my-4">
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <h5 class="text-light mb-2">💡 What I Do</h5>
+                <ul class="text-secondary">
+                    <li>Backend Development (Django, Flask, Laravel)</li>
+                    <li>REST API Design & Integration</li>
+                    <li>Database Design & Optimization</li>
+                    <li>Full Stack Web Applications</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h5 class="text-light mb-2">🎯 My Focus</h5>
+                <ul class="text-secondary">
+                    <li>Building real-world scalable systems</li>
+                    <li>Clean architecture (MVC, modular design)</li>
+                    <li>Problem-solving through code</li>
+                    <li>Continuous learning & improvement</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="text-secondary my-4">
+
+        <p class="text-secondary">
+            I have developed multiple real-world projects including CRM systems, e-commerce platforms,
+            secure quiz applications, and management systems, giving me strong practical experience in full-stack development.
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+<section id="timeline">
+<div class="container">
+
+    <div class="text-center mb-5">
+        <h2>Experience</h2>
+        <p class="text-secondary">Internship & Professional Experience</p>
+    </div>
+
+    <div class="card card-custom p-4">
+
+        <h5 class="text-light">Enlighten Infosystem</h5>
+
+        <p class="text-secondary small mb-2">
+            Dec 2024 – Jul 2025
+        </p>
+
+        <p class="text-secondary">
+            Started as a <b>Intern (Dec 2024 – Jun 2025)</b> and later continued as a 
+            <b>Junior Developer / Trainer (Jun 2025 – Jul 2025)</b>.
+        </p>
+
+        <ul class="text-secondary">
+
+            <li>
+                Developed full-stack applications using Flask, Django, Laravel, and modern web technologies
+            </li>
+
+            <li>
+                Built real-world systems including CRM platforms, booking systems, and management dashboards
+            </li>
+
+            <li>
+                Designed and integrated REST APIs with optimized database structures
+            </li>
+
+            <li>
+                Mentored and trained <b>50+ students (interns)</b> in technologies including 
+                Flask, Django, PHP, Laravel, HTML, CSS, JavaScript, Python, and basics of Data Analytics
+            </li>
+
+            <li>
+                Managed intern batches, guided project development, and assisted in debugging and code reviews
+            </li>
+
+            <li>
+                Contributed to real client projects and collaborated in a team-based development environment
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="container">
+
+    <div class="text-center mb-5">
+        <h2>Technical Skills</h2>
+        <p class="text-secondary">
+            Technologies I use to build scalable full-stack applications
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Backend -->
+        <div class="col-md-4">
+            <div class="card card-custom p-4 text-center h-100">
+                <h5 class="mb-3 text-light">Backend</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Django</span>
+                    <span class="skill-badge">Flask</span>
+                    <span class="skill-badge">Laravel</span>
+                    <span class="skill-badge">Node.js</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">C#</span>
+                    <span class="skill-badge">PHP MVC</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="col-md-4">
+            <div class="card card-custom p-4 text-center h-100">
+                <h5 class="mb-3 text-light">Frontend</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="skill-badge">HTML</span>
+                    <span class="skill-badge">CSS</span>
+                    <span class="skill-badge">Bootstrap</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Angular</span>
+                    <span class="skill-badge">AJAX</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Database -->
+        <div class="col-md-4">
+            <div class="card card-custom p-4 text-center h-100">
+                <h5 class="mb-3 text-light">Database</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">Oracle</span>
+                    <span class="skill-badge">MongoDB</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile + Tools -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 text-center h-100">
+                <h5 class="mb-3 text-light">Mobile Development</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="skill-badge">Dart</span>
+                    <span class="skill-badge">Flutter</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card card-custom p-4 text-center h-100">
+                <h5 class="mb-3 text-light">Tools & Concepts</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="skill-badge">Git</span>
+                    <span class="skill-badge">GitHub</span>
+                    <span class="skill-badge">VS Code</span>
+                    <span class="skill-badge">REST APIs</span>
+                    <span class="skill-badge">MVC</span>
+                    <span class="skill-badge">OOP</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+
+    <div class="text-center mb-5">
+        <h2>Featured Projects</h2>
+        <p class="text-secondary">
+            A collection of real-world full-stack applications showcasing backend, frontend, and system design skills
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- CRM -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">CRM System </h5>
+                <p class="text-secondary">
+                    Role-based CRM (Admin, Manager, Client) for managing financial data, client assignments, performance tracking, and analytics.
+                </p>
+                <p class="text-secondary small"><b class="text-secondary">Tech:</b> 
+                    <span class="skill-badge">Django</span>
+                    <span class="skill-badge">Bootstrap</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">JavaScript</span> 
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- ECOM DJANGO -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">E-Commerce (Django) </h5>
+                <p class="text-secondary">
+                    Full e-commerce platform with cart, checkout flow, Razorpay integration, COD, and admin management system.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b>
+                    <span class="skill-badge">Django</span>
+                    <span class="skill-badge">Bootstrap</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">AJAX</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- QUIZZY -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">Quizzy </h5>
+                <p class="text-secondary">
+                    Secure quiz platform with camera-based monitoring, anti-cheating detection, and auto certificate generation via email.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b> 
+                    <span class="skill-badge">Laravel</span>
+                    <span class="skill-badge">Bootstrap</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">AJAX</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- VISITOR -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">Visitor Management System </h5>
+                <p class="text-secondary">
+                    Visitor tracking system with face-based registration, notifications to employees, and time tracking inside company premises.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b>
+                    <span class="skill-badge">Flask</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">JavaScript</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- BLOG -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">Blog Portal </h5>
+                <p class="text-secondary">
+                    Social blogging system with authentication, posts (text/images), reactions, comments, and admin moderation.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b>
+                    <span class="skill-badge">Flask</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">REST API</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- TASK SYSTEM -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">Task Assignment System </h5>
+                <p class="text-secondary">
+                    Admin assigns tasks, users receive notifications and track progress with completion status system.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b> 
+                    <span class="skill-badge">Flask</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">Bootstrap</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- RPECOM -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light"> Rpecom (Flask E-Commerce) </h5>
+                <p class="text-secondary">
+                    E-commerce system with Razorpay integration, cart, checkout flow, and admin product management.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b> 
+                    <span class="skill-badge">Flask</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">JavaScript</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">Result Management System </h5>
+                <p class="text-secondary">
+                    Academic system to manage courses, batches, subjects, and student marks with public result access.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b> 
+                    <span class="skill-badge">Flask</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">JavaScript</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- VOTING -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">Online Voting System </h5>
+                <p class="text-secondary">
+                    Poll-based voting system where users vote in categories and winners are declared after voting closes.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b> 
+                    <span class="skill-badge">Flask</span>
+                    <span class="skill-badge">MySQL</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- CATSYS -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">Catsys </h5>
+                <p class="text-secondary">
+                    Rating system for movies/books with user reviews, comments, and admin content control.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b> 
+                    <span class="skill-badge">Flask</span>
+                    <span class="skill-badge">MySQL</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+        <!-- EMPLOYEE TKINTER -->
+        <div class="col-md-6">
+            <div class="card card-custom p-4 h-100">
+                <h5 class="text-light">Employee Management System </h5>
+                <p class="text-secondary">
+                    Desktop-based system for managing employee records using CRUD operations in Tkinter UI.
+                </p>
+                <p class="text-secondary small"><b>Tech:</b> 
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Tkinter</span>
+                    <span class="skill-badge">MySQL</span>
+                </p>
+                <a class="btn btn-outline-light me-2">GitHub</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+
+    <div class="text-center mb-5">
+        <h2>Let’s Work Together</h2>
+        <p class="text-secondary">
+            Open for freelance, internships, and full-time opportunities
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- LEFT: Contact Info -->
+        <div class="col-md-12 text-center">
+            <div class="card card-custom p-4 h-100">
+
+                <h5 class="text-light mb-3">Contact Information</h5>
+
+                <p class="text-secondary">📍 Vadodara, India</p>
+                <p class="text-secondary">📞 +91 8200517195</p>
+                <p class="text-secondary">📧 ayushbhoi79@gmail.com</p>
+
+                <hr class="text-secondary">
+
+                <p class="text-secondary small">
+                    I usually respond within 24 hours. For urgent opportunities, email is preferred.
+                </p>
+
+                <div class="mt-3 d-flex gap-2 text-center">
+                    <a href="https://github.com/Ayush-Bhoi" 
+                    class="btn btn-outline-light flex-fill" 
+                    target="_blank">
+                    GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/ayush-bhoi1710/" 
+                    class="btn btn-outline-light flex-fill" 
+                    target="_blank">
+                    LinkedIn
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT: CTA Card -->
+        <!-- <div class="col-md-7">
+            <div class="card card-custom p-4 h-100">
+
+                <h5 class="text-light mb-3">Send a Message</h5>
+
+                <form>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control bg-dark text-light border-0"
+                               placeholder="Your Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control bg-dark text-light border-0"
+                               placeholder="Your Email">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control bg-dark text-light border-0"
+                                  rows="4"
+                                  placeholder="Tell me about your project..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-glow w-100">
+                        🚀 Send Message
+                    </button>
+
+                </form>
+
+            </div>
+        </div> -->
+
+    </div>
+
+    <!-- Bottom CTA strip -->
+    <div class="text-center mt-5">
+        <h5 class="text-light">Need a Developer for Your Project?</h5>
+        <p class="text-secondary">
+            Let’s build something scalable, fast, and production-ready.
+        </p>
+
+        <a href="mailto:ayushbhoi79@gmail.com" class="btn btn-primary-custom">
+            📩 Hire Me Now
+        </a>
+    </div>
+
+</div>
+</section>
+
+<footer class="text-center py-3">
+    © 2026 Ayush Bhoi | Built with HTML, Bootstrap & Passion
+</footer>
+
+
+
+<script>
+window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
+});
+</script>
+<script>
+const toggleBtn = document.getElementById("themeToggle");
+
+toggleBtn.addEventListener("click", () => {
+    document.documentElement.classList.toggle("light");
+
+    if (document.documentElement.classList.contains("light")) {
+        toggleBtn.textContent = "☀️";
+    } else {
+        toggleBtn.textContent = "🌙";
+    }
+});
+</script>
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 100) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active-link");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active-link");
+        }
+    });
+});
+
+const roles = [
+    "Full Stack Developer",
+    "Python Backend Engineer",
+    "Web Application Developer",
+    "Software Engineer"
+];
+
+let i = 0;
+let j = 0;
+let isDeleting = false;
+
+function type() {
+    let current = roles[i];
+
+    document.getElementById("typing").textContent =
+        current.substring(0, j);
+
+    if (!isDeleting && j < current.length) {
+        j++;
+    } else if (isDeleting && j > 0) {
+        j--;
+    } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) i = (i + 1) % roles.length;
+    }
+
+    setTimeout(type, isDeleting ? 60 : 100);
+}
+
+type();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
+>>>>>>> a3bdf41 (add resume)
